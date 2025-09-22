@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		A5C3E5E92E7EFE4A006AECCE /* Crypton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Crypton.app; path = "/Users/daniil/XcodeProjects/Crypton/build/Debug-iphoneos/Crypton.app"; sourceTree = "<absolute>"; };
+		A5C7E7522E81BA49005957B7 /* Crypton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,6 +33,7 @@
 			isa = PBXGroup;
 			children = (
 				A5C3E5EB2E7EFE4A006AECCE /* Crypton */,
+				A5C7E7522E81BA49005957B7 /* Crypton.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +59,7 @@
 			packageProductDependencies = (
 			);
 			productName = Crypton;
-			productReference = A5C3E5E92E7EFE4A006AECCE /* Crypton.app */;
+			productReference = A5C7E7522E81BA49005957B7 /* Crypton.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

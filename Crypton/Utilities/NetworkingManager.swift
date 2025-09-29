@@ -33,8 +33,18 @@ class NetworkingManager {
     }
 
     static func handleURLResponse(output: URLSession.DataTaskPublisher.Output, url: URL) throws -> Data {
-        guard let response = output.response as? HTTPURLResponse,
-              response.statusCode >= 200 && response.statusCode < 300 else {
+        guard let response = output.response as? HTTPURLResponse else {
+            throw NetworkingError.badURLResponse(url: url)
+        }
+
+        if !(200...299).contains(response.statusCode) {
+            print("❌ Bad response from \(url)")
+            print("Status code:", response.statusCode)
+
+            if let text = String(data: output.data, encoding: .utf8) {
+                print("Response body:", text)
+            }
+
             throw NetworkingError.badURLResponse(url: url)
         }
 

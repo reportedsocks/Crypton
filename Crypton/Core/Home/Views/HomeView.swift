@@ -14,6 +14,7 @@ struct HomeView: View {
     @State private var showPortfolio: Bool = false
     @State private var chevronRotation: Angle = .zero
     @State private var showPortfolioView: Bool = false // new sheet
+    @State private var showSettingsView: Bool = false
 
     @State private var selectedCoin: CoinModel? = nil
     @State private var showDetailedView: Bool = false
@@ -49,6 +50,9 @@ struct HomeView: View {
 
                 Spacer()
             }
+            .sheet(isPresented: $showSettingsView) {
+                SettingsView()
+            }
         }
         .background(
             NavigationLink(
@@ -80,6 +84,8 @@ extension HomeView {
                 .onTapGesture {
                     if showPortfolio {
                         showPortfolioView.toggle()
+                    } else {
+                        showSettingsView.toggle()
                     }
                 }
 

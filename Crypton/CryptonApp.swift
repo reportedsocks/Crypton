@@ -16,6 +16,7 @@ struct CryptonApp: App {
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
+        UITableView.appearance().backgroundColor = UIColor(Color.theme.background)
     }
 
     var body: some Scene {
@@ -26,6 +27,7 @@ struct CryptonApp: App {
                     HomeView()
                         .navigationBarHidden(true)
                 }
+                .navigationViewStyle(.stack)
                 .environmentObject(vm)
 
                 ZStack {
